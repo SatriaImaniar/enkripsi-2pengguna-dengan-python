@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white text-center">
+          <h2 class="mb-0">Register</h2>
+        </div>
+        <div class="card-body p-4">
+          <form method="POST">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person-plus-fill"></i></span>
+                <input id="username" name="username" class="form-control" placeholder="Pilih username" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
+                <input id="password" name="password" type="password" class="form-control" placeholder="Buat password" required>
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" type="submit">Daftar</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <p class="mb-0">Sudah punya akun? <a href="{{ url_for('login') }}" class="text-decoration-none">Login</a></p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-3">
+        <small class="text-muted">Daftar untuk menggunakan aplikasi chat dengan enkripsi end-to-end</small>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
